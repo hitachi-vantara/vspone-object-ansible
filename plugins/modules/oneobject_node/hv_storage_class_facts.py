@@ -214,7 +214,7 @@ ansible_facts:
                 storage_components:
                     description:
                         - List of storage components associated with the storage classes.
-                        - Refer to M(hitachivantara.vspone_object.oneobject_node.hv_storage_components_fact) for more details.
+                        - Refer to M(hitachivantara.vspone_object.oneobject_node.hv_storage_components_facts) for more details.
                     type: list
                     elements: dict
                     sample: []
