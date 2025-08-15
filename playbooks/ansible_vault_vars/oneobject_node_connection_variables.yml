@@ -1,0 +1,18 @@
+http_request_timeout: 300
+http_request_retry_times: 3
+http_request_retry_interval_seconds: 5
+ssl:
+  validate_certs: false
+  client_cert: ""
+  client_key: ""
+  ca_path: ""
+  ssl_version: ""
+  ca_certs: ""
+  ssl_cipher: ""
+  check_hostname: false
+
+cluster_name: "vsp1o-k8s.scl.sie.hds.com"
+region: "us-west-2"
+oneobject_node_username: "ansiblemodule"
+oneobject_node_userpass: "Start1234567"
+oneobject_node_client_id: "vsp-object-external-client"
