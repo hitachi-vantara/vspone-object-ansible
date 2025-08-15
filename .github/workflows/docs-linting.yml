@@ -38,5 +38,6 @@ jobs:
       #     ansible.netcommon
       #     ansible.utils
 
+      # Check ansible-doc linting issues if any
       - name: Run collection docs linter
         run: antsibull-docs lint-collection-docs . --plugin-docs --skip-rstcheck
