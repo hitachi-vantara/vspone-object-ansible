@@ -1,0 +1,34 @@
+---
+namespace: hitachivantara
+name: vspone_object
+version: 1.0.0
+readme: README.md
+authors:
+  - Hitachi Vantara Ansible Team
+description: >
+  Ansible modules to manage Hitachi VSP One Object Storage systems using the Hitachi VSP One platform.
+  These modules provide a simplified and automated way to configure and manage Hitachi VSP One Object Storage systems,
+  enabling seamless integration with Ansible playbooks and workflows.
+license:
+  - GPL-3.0-or-later
+tags:
+  - hitachi
+  - hv
+  - hitachi_vantara
+  - vspone_object
+  - vsp
+  - vsp_one
+  - storage
+dependencies: {}
+repository: https://github.com/hitachi-vantara/vspone-object-ansible
+documentation: https://docs.ansible.com/ansible/devel/collections/hitachivantara/vspone_object/
+issues: https://github.com/hitachi-vantara/vspone-object-ansible/issues
+build_ignore:
+  - collection_build.sh
+  - scripts
+# A dict controlling use of manifest directives used in building the collection artifact. The key 'directives' is a
+# list of MANIFEST.in style
+# L(directives,https://packaging.python.org/en/latest/guides/using-manifest-in/#manifest-in-commands). The key
+# 'omit_default_directives' is a boolean that controls whether the default directives are used. Mutually exclusive
+# with 'build_ignore'
+# manifest: null
