@@ -78,7 +78,7 @@ Below is an example of how this collection can be used to manage Hitachi VSP One
 
 ### Add certificate to VSP One Object
 
-This example shows how to create a logical device (LDEV) with a specific ID, pool, and size.
+This example shows how to add a certificate to VSP One Object
 
 ```yaml
 - name: Add 
