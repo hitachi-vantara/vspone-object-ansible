@@ -13,6 +13,12 @@ description:
 version_added: '1.0.0'
 author:
   - Hitachi Vantara, LTD. (@hitachi-vantara)
+requirements:
+  - python >= 3.9
+attributes:
+  check_mode:
+    description: Determines if the module should run in check mode.
+    support: none
 options:
   connection_info:
     description: Information required to establish a connection to the system.
@@ -178,7 +184,7 @@ def main():
 
     fields = OOArgumentSpec.set_serial_number()
 
-    module = AnsibleModule(argument_spec=fields, supports_check_mode=True)
+    module = AnsibleModule(argument_spec=fields)
     connection_info = module.params['connection_info']
 
     gw = OOGateway()
