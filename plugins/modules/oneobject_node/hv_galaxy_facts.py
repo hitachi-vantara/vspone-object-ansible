@@ -13,6 +13,12 @@ description:
 version_added: '1.0.0'
 author:
   - Hitachi Vantara, LTD. (@hitachi-vantara)
+requirements:
+  - python >= 3.9
+attributes:
+  check_mode:
+    description: Determines if the module should run in check mode.
+    support: full
 options:
   connection_info:
     description: Information required to establish a connection to the system.
