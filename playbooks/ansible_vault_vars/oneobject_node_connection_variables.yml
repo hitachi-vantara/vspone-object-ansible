@@ -11,8 +11,8 @@ ssl:
   ssl_cipher: ""
   check_hostname: false
 
-cluster_name: "vsp1o-k8s.scl.sie.hds.com"
-region: "us-west-2"
-oneobject_node_username: "ansiblemodule"
-oneobject_node_userpass: "Start1234567"
+cluster_name: "cluster-fqdn"
+region: "region"
+oneobject_node_username: "username"
+oneobject_node_userpass: "password"
 oneobject_node_client_id: "vsp-object-external-client"
