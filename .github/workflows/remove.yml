@@ -16,7 +16,7 @@ jobs:
       - name: Remove Collection from Ansible Galaxy
         env:
           COLLECTION_NAMESPACE: hitachivantara
-          COLLECTION_NAME: vspone_block
+          COLLECTION_NAME: vspone_object
           VERSION: ${{ github.event.inputs.version }}
           API_KEY: ${{ secrets.ANSIBLE_COLLECTIONS_TOKEN }}
         run: |
@@ -26,7 +26,7 @@ jobs:
       - name: Verify Deletion from Ansible Galaxy
         env:
           COLLECTION_NAMESPACE: hitachivantara
-          COLLECTION_NAME: vspone_block
+          COLLECTION_NAME: vspone_object
           VERSION: ${{ github.event.inputs.version }}
         run: |
           response=$(curl -s "https://galaxy.ansible.com/api/v3/plugin/ansible/content/published/collections/index/${COLLECTION_NAMESPACE}/${COLLECTION_NAME}/versions/")
