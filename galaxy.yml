@@ -21,7 +21,7 @@ tags:
   - storage
 dependencies: {}
 repository: https://github.com/hitachi-vantara/vspone-object-ansible
-documentation: https://docs.ansible.com/ansible/devel/collections/hitachivantara/vspone_object/
+documentation: https://github.com/hitachi-vantara/vspone-object-ansible
 issues: https://github.com/hitachi-vantara/vspone-object-ansible/issues
 build_ignore:
   - collection_build.sh
