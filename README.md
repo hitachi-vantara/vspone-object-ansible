@@ -4,7 +4,6 @@ The Hitachi Vantara VSP One Object Storage Modules provide a comprehensive set o
 
 ## Hardware requirements
 
-- VSP One Object 3.0
 - VSP One Object 3.1
 ## Software requirements
 
