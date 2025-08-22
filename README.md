@@ -1,6 +1,6 @@
-# Hitachi Vantara VSP One Object Storage Modules for Red Hat® Ansible® 1.0.0
+# Hitachi VSP One Object Storage Modules for Red Hat® Ansible® 1.0.0
 
-The Hitachi Vantara VSP One Object Storage Modules provide a comprehensive set of Ansible modules for managing Hitachi VSP One Object series systems. These modules enable seamless integration with Red Hat Ansible, allowing users to automate storage provisioning, configuration, and management tasks.
+The Hitachi VSP One Object Storage Modules provide a comprehensive set of Ansible modules for managing Hitachi VSP One Object series systems. These modules enable seamless integration with Red Hat Ansible, allowing users to automate storage provisioning, configuration, and management tasks.
 
 ## Hardware requirements
 
@@ -116,7 +116,7 @@ For User Guide and Release Notes, see [User Guide and Release Notes](https://doc
 
 Version **1.0.0** highlights:
 
-- Initial release of the Hitachi Vantara VSP One Object Storage Modules for Ansible, providing core functionality for automating storage provisioning, configuration, and management tasks on VSP One Object series systems.
+- Initial release of the Hitachi VSP One Object Storage Modules for Ansible, providing core functionality for automating storage provisioning, configuration, and management tasks on VSP One Object series systems.
 - Idempotence supported for all included modules.
 - Comprehensive documentation and troubleshooting resources provided.
 
