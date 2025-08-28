@@ -49,7 +49,7 @@ collections:
 Note that if you install the collection from Ansible Galaxy, it will not be upgraded automatically when you upgrade the Ansible package.
 
 
-If you need to install a specific version of the collection (for example, to downgrade due to issues in the latest version), you can use the following syntax to install version 4.0.1:
+If you need to install a specific version of the collection (for example, to downgrade due to issues in the latest version), you can use the following syntax to install version 1.0.0:
 
 ```bash
 ansible-galaxy collection install hitachivantara.vspone_object:==1.0.0
