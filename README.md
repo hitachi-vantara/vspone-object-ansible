@@ -8,7 +8,7 @@ The Hitachi VSP One Object Storage Modules provide a comprehensive set of Ansibl
 ## Software requirements
 
 - Red Hat Ansible Core - 2.17, 2.18, 2.19
-- Python - 3.9 or higher
+- Python - 3.7 or higher
 
 ## Supported operating systems
 
