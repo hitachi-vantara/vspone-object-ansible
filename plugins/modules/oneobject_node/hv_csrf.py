@@ -19,7 +19,7 @@ version_added: '1.0.0'
 author:
   - Hitachi Vantara, LTD. (@hitachi-vantara)
 requirements:
-  - python >= 3.9
+  - python >= 3.7
 attributes:
   check_mode:
     description: Determines if the module should run in check mode.
