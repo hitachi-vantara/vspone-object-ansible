@@ -4,6 +4,19 @@ Hitachivantara.Vspone\_Object Release Notes
 
 .. contents:: Topics
 
+v1.1.0
+======
+
+Release Summary
+---------------
+
+This minor release of `hitachivantara.vspone_object` enhances the storage component module with initial support for VSP One B20 series storage systems.
+
+Minor Changes
+-------------
+
+- Enhanced `hv_storage_component` module to support storage components of type ARRAY for VSP One B20 series storage systems.
+
 v1.0.0
 ======
 

@@ -30,7 +30,21 @@
         var: result
 
     ####################################################################
-    # Task 2 : Get all the storage components capacity
+    # Task 2 : Get n storage components
+    ####################################################################
+    - name: Get storage components
+      hitachivantara.vspone_object.oneobject_node.hv_storage_components_facts:
+        connection_info: "{{ connection_info }}"
+        spec:
+          page_size: 2
+      register: result
+
+    - name: Display result
+      ansible.builtin.debug:
+        var: result
+
+    ####################################################################
+    # Task 3 : Get all the storage components capacity
     ####################################################################
     - name: Get storage components capacity
       hitachivantara.vspone_object.oneobject_node.hv_storage_components_facts:
@@ -38,7 +52,6 @@
         spec:
           query: "CAPACITY"
       register: result
-
 
     - name: Display result
       ansible.builtin.debug:
