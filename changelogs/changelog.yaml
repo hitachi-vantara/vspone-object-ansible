@@ -121,3 +121,14 @@ releases:
       name: hv_users_facts
       namespace: oneobject_node
     release_date: '2025-08-12'
+  1.1.0:
+    changes:
+      minor_changes:
+      - Enhanced `hv_storage_component` module to support storage components of type
+        ARRAY for VSP One B20 series storage systems.
+      release_summary: This minor release of `hitachivantara.vspone_object` enhances
+        the storage component module with initial support for VSP One B20 series storage
+        systems.
+    fragments:
+    - release-1.1.0.yml
+    release_date: '2025-11-14'

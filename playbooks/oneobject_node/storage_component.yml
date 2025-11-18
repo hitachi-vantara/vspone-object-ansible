@@ -141,3 +141,26 @@
     - name: Display output_variable
       ansible.builtin.debug:
         var: output_variable
+    ####################################################################
+    # Task 6 : Create storage component of type array
+    ####################################################################
+    - name: Create storage component of type array
+      hitachivantara.vspone_object.oneobject_node.hv_storage_component:
+        connection_info: "{{ connection_info }}"
+        state: "present"
+        spec:
+          storage_type: "ARRAY"
+          storage_component_config:
+            label: "array_component_test"
+            storage_class: "test_storage_class"
+            storage_fault_domain: "storage_fault_domain_test"
+            activate_now: true
+            array_name: "array-name-test"
+            array_storage_tier: "NVMe-TLC"
+          storage_custom_metadata:
+            custom_key1: "custom_value1"
+            custom_key2: "custom_value2"
+      register: output_variable
+    - name: Display output_variable
+      ansible.builtin.debug:
+        var: output_variable

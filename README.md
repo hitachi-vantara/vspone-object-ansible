@@ -1,10 +1,10 @@
-# Hitachi VSP One Object Storage Modules for Red Hat® Ansible® 1.0.0
+# Hitachi VSP One Object Storage Modules for Red Hat® Ansible® 1.1.0
 
 The Hitachi VSP One Object Storage Modules provide a comprehensive set of Ansible modules for managing Hitachi VSP One Object series systems. These modules enable seamless integration with Red Hat Ansible, allowing users to automate storage provisioning, configuration, and management tasks.
 
 ## Hardware requirements
 
-- VSP One Object 3.1
+- VSP One Object 3.2
 ## Software requirements
 
 - Red Hat Ansible Core - 2.16, 2.17, 2.18, 2.19
@@ -48,6 +48,11 @@ collections:
 
 Note that if you install the collection from Ansible Galaxy, it will not be upgraded automatically when you upgrade the Ansible package.
 
+To upgrade the collection to the latest available version, run the following command:
+
+```bash
+ansible-galaxy collection install hitachivantara.vspone_object --upgrade
+```
 
 If you need to install a specific version of the collection (for example, to downgrade due to issues in the latest version), you can use the following syntax to install version 1.0.0:
 
@@ -112,13 +117,10 @@ For additional support, please use one of the following channels:
 
 ### Release Notes
 
-For User Guide and Release Notes, see [User Guide and Release Notes](https://docs.hitachivantara.com/search/all?query=ansible&value-filters=Option~%2522Red+Hat%2522*Product_custom~%2522Adapters+and+Drivers%2522&content-lang=en-US)
+Version **1.1.0** highlights:
 
-Version **1.0.0** highlights:
-
-- Initial release of the Hitachi VSP One Object Storage Modules for Ansible, providing core functionality for automating storage provisioning, configuration, and management tasks on VSP One Object series systems.
-- Idempotence supported for all included modules.
-- Comprehensive documentation and troubleshooting resources provided.
+- Expanded hv_storage_component to include ARRAY-type storage component support for VSP One Block storage management.
+- General performance enhancements and bug fixes
 
 ### Roadmap
 
