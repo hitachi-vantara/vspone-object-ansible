@@ -1,10 +1,11 @@
-# Hitachi VSP One Object Storage Modules for Red Hat® Ansible® 1.1.0
+# Hitachi Virtual Storage Platform One Object Storage Modules for Red Hat® Ansible® 1.1.0
 
-The Hitachi VSP One Object Storage Modules provide a comprehensive set of Ansible modules for managing Hitachi VSP One Object series systems. These modules enable seamless integration with Red Hat Ansible, allowing users to automate storage provisioning, configuration, and management tasks.
+The Hitachi Virtual Storage Platform One Object Storage Modules provide a comprehensive set of Ansible modules for managing VSP One Object series systems. These modules enable seamless integration with Red Hat Ansible, allowing users to automate storage provisioning, configuration, and management tasks.
 
 ## Hardware requirements
 
 - VSP One Object 3.2
+
 ## Software requirements
 
 - Red Hat Ansible Core - 2.16, 2.17, 2.18, 2.19
@@ -78,7 +79,7 @@ ansible-test sanity
 
 ## Use Cases
 
-Below is an example of how this collection can be used to manage Hitachi VSP One Object Storage:
+Below is an example of how this collection can be used to manage a VSP One Object storage system:
 
 ### Add certificate to VSP One Object
 
@@ -119,7 +120,7 @@ For additional support, please use one of the following channels:
 
 Version **1.1.0** highlights:
 
-- Expanded hv_storage_component to include ARRAY-type storage component support for VSP One Block storage management.
+- Expanded hv_storage_component to include ARRAY-type storage component support for VSP One Block storage system management.
 - General performance enhancements and bug fixes
 
 ### Roadmap
