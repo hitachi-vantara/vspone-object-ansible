@@ -1,7 +1,7 @@
 ---
 namespace: hitachivantara
 name: vspone_object
-version: 1.1.0
+version: 1.1.1
 readme: README.md
 authors:
   - Hitachi Vantara Ansible Team
