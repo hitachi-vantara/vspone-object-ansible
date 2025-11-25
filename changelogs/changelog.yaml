@@ -132,3 +132,9 @@ releases:
     fragments:
     - release-1.1.0.yml
     release_date: '2025-11-14'
+  1.1.1:
+    changes:
+      release_summary: This patch release provides minor documentation improvements.
+    fragments:
+    - release-1.1.1.yml
+    release_date: '2025-11-25'

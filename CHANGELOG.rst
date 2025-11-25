@@ -4,6 +4,14 @@ Hitachivantara.Vspone\_Object Release Notes
 
 .. contents:: Topics
 
+v1.1.1
+======
+
+Release Summary
+---------------
+
+This patch release provides minor documentation improvements.
+
 v1.1.0
 ======
 
