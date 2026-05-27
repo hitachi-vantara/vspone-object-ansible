@@ -4,6 +4,22 @@ Hitachivantara.Vspone\_Object Release Notes
 
 .. contents:: Topics
 
+v1.2.0
+======
+
+Release Summary
+---------------
+
+This minor release of `hitachivantara.vspone_object` introduces reusable Ansible roles for common VSP One Object workflows.
+
+Minor Changes
+-------------
+
+- Added role `hv_vspone_object_certificate_upload_role` to upload certificate files from a folder to VSP One Object.
+- Added role `hv_vspone_object_kmip_server_role` to update HTTPS cipher strings for existing KMIP servers.
+- Added role `hv_vspone_object_license_role` to set serial number and upload a license file.
+- Added role `hv_vspone_object_storage_component_role` to activate storage components and retrieve components filtered by used capacity.
+
 v1.1.1
 ======
 

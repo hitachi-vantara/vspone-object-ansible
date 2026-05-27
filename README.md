@@ -1,10 +1,10 @@
-# Hitachi Virtual Storage Platform One Object Storage Modules for Red Hat® Ansible® 1.1.1
+# Hitachi Virtual Storage Platform One Object Storage Modules for Red Hat® Ansible® 1.2.0
 
 The Hitachi Virtual Storage Platform One Object Storage Modules provide a comprehensive set of Ansible modules for managing VSP One Object series systems. These modules enable seamless integration with Red Hat Ansible, allowing users to automate storage provisioning, configuration, and management tasks.
 
 ## Hardware requirements
 
-- VSP One Object 3.2
+- VSP One Object 3.3 or VSP One Object 3.2
 
 ## Software requirements
 
@@ -118,9 +118,13 @@ For additional support, please use one of the following channels:
 
 ### Release Notes
 
-Version **1.1.1** highlights:
+Version **1.2.0** highlights:
 
-- Minor documentation updates and clarifications.
+- Introduces reusable Ansible roles for common VSP One Object workflows.
+- Added role `hv_vspone_object_certificate_upload_role` to upload certificate files from a folder to VSP One Object.
+- Added role `hv_vspone_object_kmip_server_role` to update HTTPS cipher strings for existing KMIP servers.
+- Added role `hv_vspone_object_license_role` to set serial number and upload a license file.
+- Added role `hv_vspone_object_storage_component_role` to activate storage components and retrieve components filtered by used capacity.
 
 ### Roadmap
 
