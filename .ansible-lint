@@ -1,9 +1,9 @@
 ---
 # .ansible-lint
+profile: production
 skip_list:
   - fqcn[deep] # Skip the 'fqcn[deep]' warning
   # - fqcn[keyword]
-  - command-instead-of-module
   - yaml[line-length]
   - args[module]
 exclude_paths:
