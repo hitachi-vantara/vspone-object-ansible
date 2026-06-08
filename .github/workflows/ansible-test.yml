@@ -2,29 +2,26 @@
 name: Ansible Collection CI Test
 
 on:
-  # Run CI against all pushes (direct commits, also merged PRs), Pull Requests
   push:
     branches:
       - main
   pull_request:
-  # Run CI once per day (at 06:00 UTC)
-  # This ensures that even if there haven't been commits that we are still
-  # testing against latest version of ansible-test for each ansible-core
-  # version
   schedule:
     - cron: "0 6 * * *"
+
 jobs:
   build:
     name: Build Collection Artifact
     runs-on: ubuntu-latest
     outputs:
-      run_id: ${{ github.run_id }} # Output the run-id to be used later
+      run_id: ${{ github.run_id }}
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
       - name: Set Up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
@@ -34,24 +31,38 @@ jobs:
       - name: Build Ansible Collection
         run: ansible-galaxy collection build --force
 
-      - name: List build directory contents # Debug step
-        run: ls -la # Make sure the .tar.gz file exists
+      - name: List build directory contents
+        run: ls -la
 
       - name: Upload Build Artifact
-        id: upload # Add an ID to reference the step
         uses: actions/upload-artifact@v4
         with:
           name: collection-tarball
-          path: "*.tar.gz" # Change if using a build directory
+          path: "*.tar.gz"
           retention-days: 10
 
   sanity:
     name: Sanity Tests (Ⓐ ${{ matrix.ansible }})
     needs: build
-    strategy:
-      matrix:
-        ansible: ["stable-2.16", "stable-2.17", "stable-2.18", "stable-2.19", "stable-2.20", "devel"]
     runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - ansible: stable-2.16
+            python: "3.12"
+          - ansible: stable-2.17
+            python: "3.12"
+          - ansible: stable-2.18
+            python: "3.12"
+          - ansible: stable-2.19
+            python: "3.12"
+          - ansible: stable-2.20
+            python: "3.12"
+          - ansible: devel
+            python: "3.13"
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -60,14 +71,16 @@ jobs:
         uses: ansible-community/ansible-test-gh-action@release/v1
         with:
           ansible-core-version: ${{ matrix.ansible }}
-          origin-python-version: "3.12"
+          origin-python-version: ${{ matrix.python }}
           testing-type: sanity
           pull-request-change-detection: false
 
   check:
     name: Check All Tests
-    needs: sanity
+    needs:
+      - sanity
     runs-on: ubuntu-latest
+
     steps:
       - name: Ensure All Tests Passed
         uses: re-actors/alls-green@release/v1
