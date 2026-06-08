@@ -60,7 +60,7 @@ jobs:
         uses: ansible-community/ansible-test-gh-action@release/v1
         with:
           ansible-core-version: ${{ matrix.ansible }}
-          origin-python-version: "3.12"
+          origin-python-version: "3.13"
           testing-type: sanity
           pull-request-change-detection: false
 
