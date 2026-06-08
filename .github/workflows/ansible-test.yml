@@ -2,10 +2,15 @@
 name: Ansible Collection CI Test
 
 on:
+  # Run CI against all pushes (direct commits, also merged PRs), Pull Requests
   push:
     branches:
       - main
   pull_request:
+  # Run CI once per day (at 06:00 UTC)
+  # This ensures that even if there haven't been commits that we are still
+  # testing against latest version of ansible-test for each ansible-core
+  # version
   schedule:
     - cron: "0 6 * * *"
 
@@ -14,14 +19,14 @@ jobs:
     name: Build Collection Artifact
     runs-on: ubuntu-latest
     outputs:
-      run_id: ${{ github.run_id }}
+      run_id: ${{ github.run_id }} # Output the run-id to be used later
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
       - name: Set Up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v4
         with:
           python-version: "3.12"
 
@@ -31,20 +36,20 @@ jobs:
       - name: Build Ansible Collection
         run: ansible-galaxy collection build --force
 
-      - name: List build directory contents
-        run: ls -la
+      - name: List build directory contents # Debug step
+        run: ls -la # Make sure the .tar.gz file exists
 
       - name: Upload Build Artifact
+        id: upload # Add an ID to reference the step
         uses: actions/upload-artifact@v4
         with:
           name: collection-tarball
-          path: "*.tar.gz"
+          path: "*.tar.gz" # Change if using a build directory
           retention-days: 10
 
   sanity:
     name: Sanity Tests (Ⓐ ${{ matrix.ansible }})
     needs: build
-    runs-on: ubuntu-latest
 
     strategy:
       fail-fast: false
@@ -63,6 +68,8 @@ jobs:
           - ansible: devel
             python: "3.13"
 
+    runs-on: ubuntu-latest
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -77,8 +84,7 @@ jobs:
 
   check:
     name: Check All Tests
-    needs:
-      - sanity
+    needs: sanity
     runs-on: ubuntu-latest
 
     steps:
